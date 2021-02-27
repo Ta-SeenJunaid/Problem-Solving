@@ -17,3 +17,13 @@ class Blockchain:
         hash = hash_function(data + previous_hash)
         block = Block(data, hash, previous_hash)
         self.chain.append(block)
+
+our_blockchain = Blockchain()
+our_blockchain.add_block("one")
+our_blockchain.add_block("two")
+our_blockchain.add_block("three")
+our_blockchain.add_block("four")
+our_blockchain.add_block("five")
+
+for block in our_blockchain.chain:
+    print(block.__dict__)
